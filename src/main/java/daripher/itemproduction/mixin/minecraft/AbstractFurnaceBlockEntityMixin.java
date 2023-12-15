@@ -5,6 +5,7 @@ import com.llamalad7.mixinextras.sugar.ref.LocalRef;
 import daripher.itemproduction.ItemProductionLib;
 import javax.annotation.Nullable;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
@@ -24,9 +25,10 @@ public class AbstractFurnaceBlockEntityMixin {
               shift = At.Shift.BEFORE,
               ordinal = 1))
   private void itemProduced(
+      RegistryAccess registryAccess,
       @Nullable Recipe<?> recipe,
-      NonNullList<ItemStack> stacks,
-      int stackSize,
+      NonNullList<ItemStack> inventory,
+      int maxStackSize,
       CallbackInfoReturnable<Boolean> callbackInfo,
       @Local(ordinal = 1) LocalRef<ItemStack> stack) {
     @SuppressWarnings("DataFlowIssue")

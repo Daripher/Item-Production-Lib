@@ -17,10 +17,10 @@ public class StoveBlockEntityMixin {
               value = "INVOKE",
               target =
                   "Lnet/minecraft/world/item/crafting/CampfireCookingRecipe;"
-                      + "getResultItem()Lnet/minecraft/world/item/ItemStack;",
+                      + "getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;",
               remap = true),
       remap = false)
-  private ItemStack setCookedFoodBonuses(ItemStack original) {
+  private ItemStack itemProduced(ItemStack original) {
     @SuppressWarnings("DataFlowIssue")
     StoveBlockEntity blockEntity = (StoveBlockEntity) (Object) this;
     return ItemProductionLib.itemProduced(original, blockEntity);

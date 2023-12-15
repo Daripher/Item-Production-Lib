@@ -17,7 +17,7 @@ public class CookingPotBlockEntityMixin {
               value = "INVOKE",
               target =
                   "Lvectorwing/farmersdelight/common/crafting/CookingPotRecipe;"
-                      + "getResultItem()Lnet/minecraft/world/item/ItemStack;",
+                      + "getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;",
               remap = true))
   private ItemStack itemProduced(ItemStack original) {
     @SuppressWarnings("DataFlowIssue")

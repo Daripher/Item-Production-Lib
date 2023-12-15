@@ -23,8 +23,8 @@ public class CraftingMenuMixin {
           @At(
               value = "INVOKE",
               target =
-                  "Lnet/minecraft/world/inventory/ResultContainer;setItem"
-                      + "(ILnet/minecraft/world/item/ItemStack;)V",
+                  "Lnet/minecraft/world/inventory/ResultContainer;"
+                      + "setItem(ILnet/minecraft/world/item/ItemStack;)V",
               shift = At.Shift.BEFORE))
   private static void itemProduced(
       AbstractContainerMenu pMenu,
