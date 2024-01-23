@@ -30,7 +30,7 @@ public abstract class SmithingMenuMixin extends ItemCombinerMenu {
               ordinal = 1))
   private void itemProduced(
       CallbackInfo callbackInfo, @Local(ordinal = 0) LocalRef<ItemStack> stack) {
-    if (inputSlots.getItem(0).getItem() == stack.get().getItem()) return;
+    if (inputSlots.getItem(1).getItem() == stack.get().getItem()) return;
     stack.set(ItemProductionLib.itemProduced(stack.get(), player));
   }
 }
