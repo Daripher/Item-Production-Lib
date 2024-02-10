@@ -27,6 +27,7 @@ public class ItemProductionLib {
   }
 
   public static ItemStack itemProduced(ItemStack stack, Player player) {
+    if (stack.isEmpty()) return stack;
     ItemProducedEvent event = new ItemProducedEvent(stack, player);
     MinecraftForge.EVENT_BUS.post(event);
     return event.getStack();
