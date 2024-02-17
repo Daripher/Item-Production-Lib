@@ -17,7 +17,7 @@ public class ModCraftingMenuMixin {
   private @Shadow @Final ResultContainer resultSlots;
   private @Shadow @Final Player player;
 
-  @Inject(method = "slotsChanged", at = @At(value = "TAIL"))
+  @Inject(method = "slotsChanged", at = @At(value = "TAIL"), remap = true)
   private void itemProduced(Container container, CallbackInfo callbackInfo) {
     resultSlots.setItem(0, ItemProductionLib.itemProduced(resultSlots.getItem(0), player));
   }
