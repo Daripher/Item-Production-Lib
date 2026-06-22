@@ -11,7 +11,8 @@ import vectorwing.farmersdelight.common.block.entity.StoveBlockEntity;
 public class StoveBlockEntityMixin {
   @SuppressWarnings("DefaultAnnotationParam")
   @ModifyExpressionValue(
-      method = "cookAndOutputItems",
+      // CHANGED: "cookAndOutputItems" to "cookingTick" (or "method_..." in Intermediary/Mojang mappings)
+      method = "cookingTick", 
       at =
           @At(
               value = "INVOKE",
@@ -19,7 +20,7 @@ public class StoveBlockEntityMixin {
                   "Lnet/minecraft/world/item/crafting/CampfireCookingRecipe;"
                       + "getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;",
               remap = true),
-      remap = false)
+      remap = true) // CHANGED: Set remap to true so it works in the actual Minecraft environment.
   private ItemStack itemProduced(ItemStack original) {
     @SuppressWarnings("DataFlowIssue")
     StoveBlockEntity blockEntity = (StoveBlockEntity) (Object) this;
