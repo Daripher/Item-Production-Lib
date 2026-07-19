@@ -121,7 +121,7 @@ dependencies {
     // farmer's delight
     implementation fg.deobf("curse.maven:farmers-delight-398521:8083474")
     // jei
-    implementation fg.deobf("curse.maven:jei-238222:4644453")
+    implementation fg.deobf("curse.maven:jei-238222:8419086")
     // tetra
     implementation fg.deobf("curse.maven:tetra-289712:4857842")
     implementation fg.deobf("curse.maven:mutil-351914:4824501")
