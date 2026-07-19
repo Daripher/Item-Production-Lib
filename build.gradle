@@ -119,7 +119,7 @@ dependencies {
         jarJar.ranged(it, "[0.2.1,)")
     }
     // farmer's delight
-    implementation fg.deobf("curse.maven:farmers-delight-398521:4679319")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:8083474")
     // jei
     implementation fg.deobf("curse.maven:jei-238222:4644453")
     // tetra
