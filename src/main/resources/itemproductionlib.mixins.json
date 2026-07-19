@@ -12,7 +12,7 @@
     "minecraft/SmithingMenuMixin",
     "davespotioneering/AdvancedBrewingStandBlockEntityMixin",
     "farmersdelight/CookingPotBlockEntityMixin",
-    "farmersdelight/StoveBlockEntityMixin",
+    "farmersdelight/AbstractStoveBlockEntityMixin",
     "visualworkbench/ModCraftingMenuMixin"
   ],
   "client": [
